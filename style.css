@@ -1,0 +1,82 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    margin-top: 20px;
+    grid-column-gap: 1em;
+    margin-left: 5%;
+    max-width: 85%;
+    margin-bottom: 20px;
+}
+    /* grid-auto-rows: minmax(100px, auto); */
+        
+/* }      */
+     
+     /* .container{
+        display: grid;
+        grid-template-columns: 1fr, 2fr, 1fr;
+        margin-top: 10px;
+        grid-column-gap: 1em;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        background-color: #ffe082;
+      } */
+
+      /* .container > div {
+        background: #eee;
+        padding: 1rem;
+      }
+
+      .container > div:nth-child(odd){
+        background:#ddd;
+      } */
+
+      .nav-wrapper {
+          background-color: black;
+      }
+
+      .page-footer {
+          background-color: black;
+      }
+
+
+      .modal-content {
+          text-align: center;
+          margin-top: 50px;
+      }
+
+      #countdown {
+        grid-area: 1/1/2/2 ;
+        background-color:  #ffe082;
+        float: left;
+      }
+
+      /* #searchBar {
+        grid-area: 1/3/2/6;
+      } */
+
+      #drinkInput {
+        grid-area: 1/2/2/5;
+      }
+
+      /* #fadedtext {
+        text-align: center;
+      } */
+
+      #searchButton {
+        grid-area: 1/5/2/6;
+        margin-top: 25px;
+      }
+
+      #recentSearches {
+        grid-area: 2/1/6/2;
+      }
+
+      #results {
+        grid-area: 2/2/6/5;
+      }
+
+      #nearestBars {
+        grid-area: 2/5/6/6;
+      }
+   

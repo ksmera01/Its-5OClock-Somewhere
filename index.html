@@ -1,26 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles.css">
-    <title>It's 5 O'Clock Somewhere</title>
-</head>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<body>
-    <header>
-        <h1>It's 5 O'Clock Somewhere!</h1>
-    </header>
-    <section class="container">
-        <div>
-            Content will go here.
-        </div>
-    </section>
-    <footer>
-        GIF will go here
-    </footer>
-    <script src="./assets/script.js"></script>
-</body>
+      <!-- Link CSS stylesheet -->
+      <link rel="stylesheet" href="style.css">
 
-</html>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script src="script.js"></script> -->
+              
+    
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h1>ARE YOU 21+?</h1>
+      <!-- <p>A bunch of text</p> -->
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id= "yes" class="modal-close waves-effect waves-green btn-flat">Yes I am 21+!</a>
+    </div>
+  </div>
+
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">5 O'Clock Somewhere<i class="large material-icons">favorite_border</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="wrapper">
+
+                <!-- for countdown box -->
+            <div id="countdown">Countdown to Happy Hour!</div>
+    
+            <!-- input field -->
+
+          <div id="drinkInput" class="input-field inline">
+            <textarea class="materialize-textarea" data-length="120"></textarea>
+            <!-- <input id="cocktailInput" type="cocktail" class="validate"> -->
+            <label for="cocktailInput" id=fadedText>Enter cocktail name here!</label>
+            <!-- <input id="drinkInput" type="email" class="validate">
+            <label for="email_inline">Enter cocktail name here!</label> -->
+          </div>
+
+          <!-- search button -->
+          <div id="searchButton" class="waves-effect waves-light btn"><i class="material-icons right">local_drink</i>Search</a></div>
+     
+     
+    <!-- </div> -->
+
+          <!-- <div class="container"> -->
+              
+              
+            <div id="recentSearches">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nihil sequi? Nostrum obcaecati totam incidunt quisquam nobis, ea nam, unde cumque optio cum magnam dolores sed id est perferendis blanditiis maiores ab minus temporibus dicta deleniti ducimus, neque hic minima. Sunt, maiores molestiae! Ipsa possimus eveniet provident dolor nemo! Quibusdam, iusto quas suscipit ducimus, dolore accusantium hic exercitationem quo numquam quae et odit illum quod earum explicabo inventore assumenda. Omnis nulla eveniet tenetur. Obcaecati atque quod rerum vel nesciunt nulla!
+              </div>
+            <div id="results">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nihil sequi? Nostrum obcaecati totam incidunt quisquam nobis, ea nam, unde cumque optio cum magnam dolores sed id est perferendis blanditiis maiores ab minus temporibus dicta deleniti ducimus, neque hic minima. Sunt, maiores molestiae! Ipsa possimus eveniet provident dolor nemo! Quibusdam, iusto quas suscipit ducimus, dolore accusantium hic exercitationem quo numquam quae et odit illum quod earum explicabo inventore assumenda. Omnis nulla eveniet tenetur. Obcaecati atque quod rerum vel nesciunt nulla!
+            </div>
+            <div id="nearestBars">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nihil sequi? Nostrum obcaecati totam incidunt quisquam nobis, ea nam, unde cumque optio cum magnam dolores sed id est perferendis blanditiis maiores ab minus temporibus dicta deleniti ducimus, neque hic minima. Sunt, maiores molestiae! Ipsa possimus eveniet provident dolor nemo! Quibusdam, iusto quas suscipit ducimus, dolore accusantium hic exercitationem quo numquam quae et odit illum quod earum explicabo inventore assumenda. Omnis nulla eveniet tenetur. Obcaecati atque quod rerum vel nesciunt nulla!
+            </div>
+        
+          </div>
+          </div>
+
+          <footer class="page-footer">
+            <div class="containerFoot">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Footer Content</h5>
+                  <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <div id="giphy">
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="containerFoot">
+              © 2014 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+              </div>
+            </div>
+          </footer>
+          
+                
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+     
+    </body>
+  </html>
+        
