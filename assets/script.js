@@ -52,7 +52,7 @@ $().ready(function () {
             for (let i = 0; i < 5; i++) {
                 let barEntry = barList[i];
                 // $('<h1>').appendTo('body').text(barList[i].name).attr('href', barList[i].url)
-                $('<p>').appendTo('nearestBars').text(barList[i].name)
+                $('<h3>').appendTo('#nearestBars').text(barList[i].name)
 
             }
 
