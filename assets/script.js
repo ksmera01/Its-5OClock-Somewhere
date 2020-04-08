@@ -112,7 +112,7 @@ $().ready(function () {
                     var drinkImageURL = drinkArray.strDrinkThumb;
                     console.log(drinkImageURL);
 
-                    var searchResultsDiv = $("<div class='card shadow-lg text-white bg-primary mx-auto mb-10 p-4'>");
+                    var searchResultsDiv = $("#recipes");
                     var h3drinkName = $("<h3>").text(drinkName);
                     var ingredAndMeasure1 = $("<p>").text(ingredientsAndMeasure1);
                     var ingredAndMeasure2 = $("<p>").text(ingredientsAndMeasure2);
