@@ -51,15 +51,12 @@ $().ready(function () {
 
             for (let i = 0; i < 5; i++) {
                 let barEntry = barList[i];
-                // $('<h1>').appendTo('body').text(barList[i].name).attr('href', barList[i].url)
-                $('<h3>').appendTo('#nearestBars').text(barList[i].name)
+                let barRow = $('<div>').appendTo('#nearestBars')
+                $('<a>').appendTo(barRow).attr('href', barEntry.url).text(barEntry.name)
 
             }
-
-
-
         });
-    }
+    } // END YELP API CALL
 
     // On click event for Cocktail Search:
     $("#searchButton").on("click", function (event) {
