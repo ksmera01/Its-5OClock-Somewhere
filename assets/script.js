@@ -60,4 +60,52 @@ $().ready(function () {
 
         });
     }
+
+    // On click event for Cocktail Search:
+    $("#searchButton").on("click", function (event) {
+        event.preventDefault()
+
+        var userInput = document.getElementById("drink-input").value;
+        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + userInput
+        console.log(queryURL);
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+            .then(function (response) {
+
+
+                var drinkArray = (response.drinks);
+
+                // for (var i = 0; i < drinkArray.length; i++) {
+
+                //     console.log(drinkArray[i]);
+
+                //     // Log the queryURL
+                //     console.log(queryURL);
+
+                //     // Log the resulting object
+                //     console.log(response.drinks[i]);
+
+                // For loop
+                //     for (let i = 0; i < response.drinks.length; i++) {
+
+                //     }
+
+                // Adding text to the divs above
+                $(".name").text((response.drinks[0].strDrink) + " Details");
+                $(".ingredient1").text((response.drinks[0].strIngredient1 + " - " + response.drinks[0].strMeasure1));
+                $(".ingredient2").text((response.drinks[0].strIngredient2 + " - " + response.drinks[0].strMeasure2));
+                $(".ingredient3").text((response.drinks[0].strIngredient3 + " - " + response.drinks[0].strMeasure3));
+                $(".ingredient4").text((response.drinks[0].strIngredient4 + " - " + response.drinks[0].strMeasure4));
+                $(".instructions").text((response.drinks[0].strInstructions));
+
+                // Pulling the image and appending it to image div
+                var imgURL = response.drinks[0].strDrinkThumb;
+                var image = $("<img>").attr("src", imgURL);
+                $(".imageDiv").append(image);
+
+            })
+    })
 }); // end of function-ready jquery
