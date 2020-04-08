@@ -55,7 +55,7 @@
         grid-area: 1/3/2/6;
       } */
 
-      #drinkInput {
+      #drink-input {
         grid-area: 1/2/2/5;
       }
 
@@ -68,7 +68,7 @@
         margin-top: 25px;
       }
 
-      #recentSearches {
+      #recentSearchesBox {
         grid-area: 2/1/6/2;
       }
 
