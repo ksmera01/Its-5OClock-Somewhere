@@ -72,36 +72,69 @@ $().ready(function () {
         })
             .then(function (response) {
 
-
-                var drinkArray = (response.drinks);
-
-                // for (var i = 0; i < drinkArray.length; i++) {
-
-                //     console.log(drinkArray[i]);
-
-                //     // Log the queryURL
-                //     console.log(queryURL);
-
-                //     // Log the resulting object
-                //     console.log(response.drinks[i]);
-
                 // For loop
-                //     for (let i = 0; i < response.drinks.length; i++) {
+                for (var i = 0; i < response.drinks.length; i++) {
 
-                //     }
+                    var drinkArray = response.drinks[i];
 
-                // Adding text to the divs above
-                $(".name").text((response.drinks[0].strDrink) + " Details");
-                $(".ingredient1").text((response.drinks[0].strIngredient1 + " - " + response.drinks[0].strMeasure1));
-                $(".ingredient2").text((response.drinks[0].strIngredient2 + " - " + response.drinks[0].strMeasure2));
-                $(".ingredient3").text((response.drinks[0].strIngredient3 + " - " + response.drinks[0].strMeasure3));
-                $(".ingredient4").text((response.drinks[0].strIngredient4 + " - " + response.drinks[0].strMeasure4));
-                $(".instructions").text((response.drinks[0].strInstructions));
+                    console.log(drinkArray);
 
-                // Pulling the image and appending it to image div
-                var imgURL = response.drinks[0].strDrinkThumb;
-                var image = $("<img>").attr("src", imgURL);
-                $(".imageDiv").append(image);
+                    var ingredientsAndMeasure1 = ((drinkArray.strIngredient1 + " - " + drinkArray.strMeasure1));
+                    console.log(ingredientsAndMeasure1);
+                    var ingredientsAndMeasure2 = ((drinkArray.strIngredient2 + " - " + drinkArray.strMeasure2));
+                    console.log(ingredientsAndMeasure2);
+                    var ingredientsAndMeasure3 = ((drinkArray.strIngredient3 + " - " + drinkArray.strMeasure3));
+                    console.log(ingredientsAndMeasure3);
+                    var ingredientsAndMeasure4 = ((drinkArray.strIngredient4 + " - " + drinkArray.strMeasure4));
+                    console.log(ingredientsAndMeasure4);
+                    var ingredientsAndMeasure5 = ((drinkArray.strIngredient5 + " - " + drinkArray.strMeasure5));
+                    console.log(ingredientsAndMeasure5);
+                    var ingredientsAndMeasure6 = ((drinkArray.strIngredient6 + " - " + drinkArray.strMeasure6));
+                    console.log(ingredientsAndMeasure6);
+
+
+                    // var ingredientsAndMeasure7 = ((drinkArray.strIngredient7 + " - " + drinkArray.strMeasure7));
+                    // var ingredientsAndMeasure8 = ((drinkArray.strIngredient8 + " - " + drinkArray.strMeasure8));
+                    // var ingredientsAndMeasure9 = ((drinkArray.strIngredient9 + " - " + drinkArray.strMeasure9));
+                    // var ingredientsAndMeasure10 = ((drinkArray.strIngredient10 + " - " + drinkArray.strMeasure10));
+                    // var ingredientsAndMeasure11 = ((drinkArray.strIngredient11 + " - " + drinkArray.strMeasure11));
+                    // var ingredientsAndMeasure12 = ((drinkArray.strIngredient12 + " - " + drinkArray.strMeasure12));
+                    // var ingredientsAndMeasure13 = ((drinkArray.strIngredient13 + " - " + drinkArray.strMeasure13));
+                    // var ingredientsAndMeasure14 = ((drinkArray.strIngredient14 + " - " + drinkArray.strMeasure14));
+                    // var ingredientsAndMeasure15 = ((drinkArray.strIngredient15 + " - " + drinkArray.strMeasure15));
+
+
+                    var drinkName = (drinkArray.strDrink + " Details:");
+                    console.log(drinkName);
+
+                    var instructions = drinkArray.strInstructions;
+
+                    var drinkImageURL = drinkArray.strDrinkThumb;
+                    console.log(drinkImageURL);
+
+                    var searchResultsDiv = $("<div class='card shadow-lg text-white bg-primary mx-auto mb-10 p-4'>");
+                    var h3drinkName = $("<h3>").text(drinkName);
+                    var ingredAndMeasure1 = $("<p>").text(ingredientsAndMeasure1);
+                    var ingredAndMeasure2 = $("<p>").text(ingredientsAndMeasure2);
+                    var ingredAndMeasure3 = $("<p>").text(ingredientsAndMeasure3);
+                    var ingredAndMeasure4 = $("<p>").text(ingredientsAndMeasure4);
+                    var ingredAndMeasure5 = $("<p>").text(ingredientsAndMeasure5);
+                    var h5instructionHeader = $("<h5>").text("Instructions:");
+                    var pInstructions = $("<p>").text(instructions);
+                    var image = $("<img>").attr("src", drinkImageURL);
+
+                    searchResultsDiv.append(h3drinkName);
+                    searchResultsDiv.append(ingredAndMeasure1);
+                    searchResultsDiv.append(ingredAndMeasure2);
+                    searchResultsDiv.append(ingredAndMeasure3);
+                    searchResultsDiv.append(ingredAndMeasure4);
+                    searchResultsDiv.append(ingredAndMeasure5);
+                    searchResultsDiv.append(h5instructionHeader);
+                    searchResultsDiv.append(pInstructions);
+                    searchResultsDiv.append(image);
+                    $("#results").append(searchResultsDiv);
+
+                }
 
             })
     })
