@@ -103,7 +103,10 @@ $().ready(function () {
 
     function generateNav() {
         //NEEDED TO REVERSE THIS LOOP TO CREATE THE ELEMENTS IN THE SAME ORDER AS SEARCHED
-        for (let i = recentSearches.length - 1; i >= 0; i--) {
+        // for (let i = recentSearches.length - 1; i >= 0; i--) {
+        //     pushNavItem(recentSearches[i])
+        // }
+        for (let i = 0; i < recentSearches.length; i++) {
             pushNavItem(recentSearches[i])
         }
     }
@@ -153,7 +156,7 @@ $().ready(function () {
             //removes oldest from beginning of array
             recentSearches.shift()
             //DELETE THE LAST ELEMENT FROM NAVLIST
-            navList.children().first().remove()
+            navList.children().last().remove()
             //ADD THE NEW ARRAY ITEM TO FRONT OF ARRAY
             recentSearches.push(param)
             //APPEND THE NEW ARRAY ITEM TO THE TOP OF THE NAV LIST
@@ -163,8 +166,8 @@ $().ready(function () {
     }
     //this function adds the recent search elements
     function pushNavItem(param) {
-        console.log(recentSearches)
-        $('<a>').addClass('collection-item').attr('data-name', param).on('click', btnValParse).text(param).appendTo(navList)
+        console.log(param)
+        $('<a>').addClass('collection-item').attr('data-name', param).on('click', btnValParse).text(param).prependTo(navList)
     }
     // this is a temporary solution to parse the data value to send to searchCocktails
     function btnValParse() {
