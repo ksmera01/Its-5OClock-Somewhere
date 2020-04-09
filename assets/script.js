@@ -43,7 +43,7 @@ $().ready(function () {
 
 
         if (currentHour == 17 || currentHour == 18 || currentHour == 19) {
-            $('#countdown').html("IT'S TIME FOR HAPPY HOUR!");
+            $('#countdownText').html("IT'S TIME FOR HAPPY HOUR!");
         }
     }
 
