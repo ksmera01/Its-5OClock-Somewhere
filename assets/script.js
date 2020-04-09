@@ -4,51 +4,51 @@ $().ready(function () {
 
     $("#modal1").modal();
     $('input#input_text, textarea#textarea2').characterCounter();
-    $(document).ready(function() {
+    $(document).ready(function () {
         $("#modal1").modal('open');
         countdown();
     })
 
     //  current time in hours:minutes 
-   var currentTime = moment().format('HH:mm');
+    var currentTime = moment().format('HH:mm');
 
     console.log(currentTime);
 
 
     // current time in hours:
-   var currentHour = moment().format('HH');
+    var currentHour = moment().format('HH');
 
-   console.log(currentHour);
+    console.log(currentHour);
 
-//    function to get countdown: 
- function countdown(){
-    
-    if (currentHour > 19) {
-        let hoursUntil = 24 - currentHour + 17; 
-        console.log(hoursUntil);
-        $('#countdown').html(hoursUntil + " hours until Happy Hour!");
+    //    function to get countdown: 
+    function countdown() {
+
+        if (currentHour > 19) {
+            let hoursUntil = 24 - currentHour + 17;
+            console.log(hoursUntil);
+            $('#countdown').html(hoursUntil + " hours until Happy Hour!");
+        }
+
+        if (currentHour < 17) {
+            let gettingClose = 17 - currentHour;
+            console.log(gettingClose);
+            $('#countdown').html(gettingClose + " hours until Happy Hour!");
+
+        }
+
+        if (currentHour == 16) {
+            let hourLeft = 17 - currentHour;
+            $('#countdown').html(hourLeft + " hour until Happy Hour!");
+        }
+
+
+        if (currentHour == 17 || currentHour == 18 || currentHour == 19) {
+            $('#countdown').html("IT'S TIME FOR HAPPY HOUR!");
+        }
     }
 
-    if(currentHour < 17) {
-        let gettingClose = 17 - currentHour;
-        console.log(gettingClose);
-        $('#countdown').html(gettingClose + " hours until Happy Hour!");
-
-    }
-
-    if (currentHour == 16) {
-        let hourLeft = 17 - currentHour;
-        $('#countdown').html(hourLeft + " hour until Happy Hour!");
-    }
-    
-
-    if (currentHour == 17 || currentHour == 18 || currentHour == 19) {
-        $('#countdown').html("IT'S TIME FOR HAPPY HOUR!");
-    }
-     }
 
 
-  
 
     // GLOBAL VARIABLES
     // recentSearches is a dynamically manipulated empty array to work with local storage
@@ -103,7 +103,10 @@ $().ready(function () {
 
     function generateNav() {
         //NEEDED TO REVERSE THIS LOOP TO CREATE THE ELEMENTS IN THE SAME ORDER AS SEARCHED
-        for (let i = recentSearches.length - 1; i >= 0; i--) {
+        // for (let i = recentSearches.length - 1; i >= 0; i--) {
+        //     pushNavItem(recentSearches[i])
+        // }
+        for (let i = 0; i < recentSearches.length; i++) {
             pushNavItem(recentSearches[i])
         }
     }
@@ -153,7 +156,7 @@ $().ready(function () {
             //removes oldest from beginning of array
             recentSearches.shift()
             //DELETE THE LAST ELEMENT FROM NAVLIST
-            navList.children().first().remove()
+            navList.children().last().remove()
             //ADD THE NEW ARRAY ITEM TO FRONT OF ARRAY
             recentSearches.push(param)
             //APPEND THE NEW ARRAY ITEM TO THE TOP OF THE NAV LIST
@@ -163,30 +166,36 @@ $().ready(function () {
     }
     //this function adds the recent search elements
     function pushNavItem(param) {
-        console.log(recentSearches)
-        $('<a>').addClass('collection-item').attr('data-name', param).attr('href', '#').text(param).appendTo(navList)
+        console.log(param)
+        $('<a>').addClass('collection-item').attr('data-name', param).on('click', btnValParse).text(param).prependTo(navList)
+    }
+    // this is a temporary solution to parse the data value to send to searchCocktails
+    function btnValParse() {
+        var param = ($(this).data('name'))
+        searchCocktails(param)
     }
 
     // ----- END GENERATE RECENT NAV ITEM
 
-
-
-
-    // On click event for Cocktail Search:
+    //specific onclick event for search button
     $("#searchButton").on("click", function (event) {
         event.preventDefault()
-
         var userInput = document.getElementById("drink-input").value;
         updateRecents(userInput)
-        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + userInput
+        searchCocktails(userInput)
+    })
+
+    function searchCocktails(param) {
+        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + param
         console.log(queryURL);
 
         $.ajax({
             url: queryURL,
-            method: "GET"
+            method: "GET",
         })
             .then(function (response) {
-
+                var searchResultsDiv = $("#recipes");
+                searchResultsDiv.empty()
                 // For loop
                 for (var i = 0; i < response.drinks.length; i++) {
 
@@ -227,7 +236,7 @@ $().ready(function () {
                     var drinkImageURL = drinkArray.strDrinkThumb;
                     console.log(drinkImageURL);
 
-                    var searchResultsDiv = $("#recipes");
+
                     var h3drinkName = $("<h3>").text(drinkName);
                     var ingredAndMeasure1 = $("<p>").text(ingredientsAndMeasure1);
                     var ingredAndMeasure2 = $("<p>").text(ingredientsAndMeasure2);
@@ -252,5 +261,6 @@ $().ready(function () {
                 }
 
             })
-    })
+
+    }
 }); // end of function-ready jquery
