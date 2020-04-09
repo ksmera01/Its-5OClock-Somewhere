@@ -194,7 +194,8 @@ $().ready(function () {
             method: "GET",
         })
             .then(function (response) {
-
+                var searchResultsDiv = $("#recipes");
+                searchResultsDiv.empty()
                 // For loop
                 for (var i = 0; i < response.drinks.length; i++) {
 
@@ -235,7 +236,7 @@ $().ready(function () {
                     var drinkImageURL = drinkArray.strDrinkThumb;
                     console.log(drinkImageURL);
 
-                    var searchResultsDiv = $("#recipes");
+
                     var h3drinkName = $("<h3>").text(drinkName);
                     var ingredAndMeasure1 = $("<p>").text(ingredientsAndMeasure1);
                     var ingredAndMeasure2 = $("<p>").text(ingredientsAndMeasure2);
