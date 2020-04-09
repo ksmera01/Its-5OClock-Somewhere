@@ -2,21 +2,15 @@
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     /* grid-template-rows: 20% 20% 20% 20% 20%; */
-    /* margin-top: 20px; */
+    margin-top: 20px;
     grid-column-gap: 1em;
-    margin-left: 5%; 
+    margin-left: 5%;
     max-width: 85%;
-    /* margin-top: 100px; */
     margin-bottom: 20px;
     grid-auto-rows: minmax(100px, auto);
-    /* opacity: 80%; */
-    /* height: 100%; */
+
 }
-  body {
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F04%2Fft-8-Skinny-Summer-Cocktails-That-Wont-Bust-Your-Diet.jpg&f=1&nofb=1);
-    height: 100%;
-    /* margin-top: 200px; */
-  }
+        
 /* }      */
      
      /* .container{
@@ -39,15 +33,7 @@
       } */
 
       .nav-wrapper {
-        /* background-color: orange; */
-          /* border-width: 2em;
-          border-style: solid double; */
-          border-color: orange;
-          border-style: inset; 
-          border-width: 1em;
-          color: black;
-          min-height: 150px;
-          /* height: 200 px; */
+          background-color: black;
       }
 
       .page-footer {
@@ -62,17 +48,8 @@
 
       #countdown {
         grid-area: 1/1/2/2 ;
-        /* background-color:  #dbc129; */
-        background-color: rgb(119, 15, 15);
+        background-color:  #ffe082;
         float: left;
-        border-radius: 50%;
-        height: 200px;
-        color: white;
-        text-align: center; 
-        font-weight: bold;
-        box-shadow: -10px 10px 8px turquoise;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black;
       }
 
       /* #searchBar {
@@ -80,12 +57,7 @@
       } */
 
       #drink-input {
-        /* grid-row-start: 1/span 2;
-        grid-column-start: 2/span 4; */
-        grid-area: 1/2/2/4;
-        color: whitesmoke;
-        margin-left: 50px;
-        background-color: violet;
+        grid-area: 1/2/2/5;
       }
 
       /* #fadedtext {
@@ -93,28 +65,17 @@
       } */
 
       #searchButton {
-        grid-area: 1/4/2/5;
+        grid-area: 1/5/2/6;
         margin-top: 25px;
-        /* width: 30px; */
       }
 
       #recentSearchesBox  {
         grid-area: 2/1/6/2;
       }
 
-      #upperInput {
-        grid-area: 1/2/2/5;
-        background-color: white;
-        opacity: 60%;
-        border-radius: 25%;
-      }
-
       #results {
         grid-area: 2/2/6/5;
         grid-auto-rows: max-content;
-        color: orangered;
-        background-color: whitesmoke;
-        box-shadow: linen;
       }
 
       #nearestBars {
@@ -130,30 +91,3 @@
      /* .collection-item {
       grid-area: 2/1/6/2;
       } */
-
-     .zig-zag { border: none; width: 50%; margin: auto; height: 40px; background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(315deg, #ECEDDC 25%, transparent 25%), linear-gradient(45deg, #ECEDDC 25%, transparent 25%); background-size: 40px 40px; 
-        background-color: turquoise;
-         width: 100%;
-         height: 50px;
-        }
-    
-      .whiteSpace {
-        height: 15px;
-        /* background-color: rgb(219, 185, 50); */
-        /* background-color: rgb(230, 201, 201); */
-        background-image: linear-gradient(to right, rgb(119, 15, 15), palevioletred);
-        height: 110px;
-      }
-
-      #logoText {
-        margin-top: 35px;
-        font-family: 'Indie Flower', cursive;
-        color: rgb(119, 15, 15);
-        font-weight: bold;
-        font-size: 70px;
-        text-shadow: -2px 1px 2px palevioletred;
-      }
-
-      #fadedText {
-        margin-left: 50px;
-      }
