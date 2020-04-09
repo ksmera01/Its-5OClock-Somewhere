@@ -2,6 +2,11 @@
 $().ready(function () {
     console.log("ready!");
 
+    // GLOBAL VARIABLES
+    // recentSearches is a dynamically manipulated empty array to work with local storage
+    var recentSearches = []
+    var navList = $('#recentSearches')
+
     // FUNCTION DEFINES GEOLOCATION COORDINATES OF USER
     function getLocation() {
         // Make sure browser supports this feature
@@ -29,10 +34,37 @@ $().ready(function () {
     //GLOBAL VARIABLES
     var userLocation = "";
 
+    //--------- BEGIN LOCAL STORAGE FUNCTIONS ---------
+    getLocal()
+    function getLocal() {
+        //Parse the local storage data for my specific 'Events' key and assign it a variable of stored
+        var storedRecents = JSON.parse(localStorage.getItem('Recent Drinks'))
+        //if stored is null (doesn't exist) function ends and doesn't update calEvents array with the correct data.
+        console.log(storedRecents)
+        if (storedRecents !== null) {
+            recentSearches = storedRecents;
+            generateNav()
+        }
+    }// end of Get Local
+
+    // THIS save FUNCTION IS WORKING AND SAVES VALUES ADDED TO THE INPUT BOX TO THE LOCAL STORAGE
+    function saveRecents() {
+        // // saves entire Object to local storage
+        localStorage.setItem('Recent Drinks', JSON.stringify(recentSearches));
+    }
+
+    function generateNav() {
+        //NEEDED TO REVERSE THIS LOOP TO CREATE THE ELEMENTS IN THE SAME ORDER AS SEARCHED
+        for (let i = recentSearches.length - 1; i >= 0; i--) {
+            pushNavItem(recentSearches[i])
+        }
+    }
+    //--------- END LOCAL STORAGE ---------
+
     getLocation();
     // END OF GET GEOLOCATION FUNCTION
 
-    // API CALL TO YELP
+    // ----- API CALL TO YELP
     function displayYelpOptions() {
         var settings = {
             "async": true,
@@ -56,13 +88,48 @@ $().ready(function () {
 
             }
         });
-    } // END YELP API CALL
+    } // ----- END YELP API CALL
+
+    // ----- BEGIN GENERATE RECENT NAV ITEM (Called by #searchbutton.onClick)
+
+    // this function checks the length of the recentSearches array and decides whether to remove the oldest
+    function updateRecents(param) {
+        // if less than 6 add it to the array
+        if (recentSearches.length < 3) {
+            //adds item to end of array
+            recentSearches.push(param)
+            pushNavItem(param)
+            saveRecents()
+        } // if not, remove the oldest item and add the new one
+        else {
+            //removes oldest from beginning of array
+            recentSearches.shift()
+            //DELETE THE LAST ELEMENT FROM NAVLIST
+            navList.children().first().remove()
+            //ADD THE NEW ARRAY ITEM TO FRONT OF ARRAY
+            recentSearches.push(param)
+            //APPEND THE NEW ARRAY ITEM TO THE TOP OF THE NAV LIST
+            pushNavItem(param)
+            saveRecents()
+        }
+    }
+    //this function adds the recent search elements
+    function pushNavItem(param) {
+        console.log(recentSearches)
+        $('<a>').addClass('collection-item').attr('data-name', param).attr('href', '#').text(param).appendTo(navList)
+    }
+
+    // ----- END GENERATE RECENT NAV ITEM
+
+
+
 
     // On click event for Cocktail Search:
     $("#searchButton").on("click", function (event) {
         event.preventDefault()
 
         var userInput = document.getElementById("drink-input").value;
+        updateRecents(userInput)
         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + userInput
         console.log(queryURL);
 
