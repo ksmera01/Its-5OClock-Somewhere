@@ -69,7 +69,7 @@
         margin-top: 25px;
       }
 
-      #recentSearchesBoxgit  {
+      #recentSearchesBox  {
         grid-area: 2/1/6/2;
       }
 
@@ -87,3 +87,7 @@
         max-width: 400px;
         text-align: center;
       }
+
+     /* .collection-item {
+      grid-area: 2/1/6/2;
+      } */

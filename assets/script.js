@@ -2,6 +2,54 @@
 $().ready(function () {
     console.log("ready!");
 
+    $("#modal1").modal();
+    $('input#input_text, textarea#textarea2').characterCounter();
+    $(document).ready(function() {
+        $("#modal1").modal('open');
+        countdown();
+    })
+
+    //  current time in hours:minutes 
+   var currentTime = moment().format('HH:mm');
+
+    console.log(currentTime);
+
+
+    // current time in hours:
+   var currentHour = moment().format('HH');
+
+   console.log(currentHour);
+
+//    function to get countdown: 
+ function countdown(){
+    
+    if (currentHour > 19) {
+        let hoursUntil = 24 - currentHour + 17; 
+        console.log(hoursUntil);
+        $('#countdown').html(hoursUntil + " hours until Happy Hour!");
+    }
+
+    if(currentHour < 17) {
+        let gettingClose = 17 - currentHour;
+        console.log(gettingClose);
+        $('#countdown').html(gettingClose + " hours until Happy Hour!");
+
+    }
+
+    if (currentHour == 16) {
+        let hourLeft = 17 - currentHour;
+        $('#countdown').html(hourLeft + " hour until Happy Hour!");
+    }
+    
+
+    if (currentHour == 17 || currentHour == 18 || currentHour == 19) {
+        $('#countdown').html("IT'S TIME FOR HAPPY HOUR!");
+    }
+     }
+
+
+  
+
     // GLOBAL VARIABLES
     // recentSearches is a dynamically manipulated empty array to work with local storage
     var recentSearches = []
@@ -95,7 +143,7 @@ $().ready(function () {
     // this function checks the length of the recentSearches array and decides whether to remove the oldest
     function updateRecents(param) {
         // if less than 6 add it to the array
-        if (recentSearches.length < 3) {
+        if (recentSearches.length < 8) {
             //adds item to end of array
             recentSearches.push(param)
             pushNavItem(param)
