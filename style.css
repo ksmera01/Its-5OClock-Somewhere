@@ -13,29 +13,11 @@
 body {
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F04%2Fft-8-Skinny-Summer-Cocktails-That-Wont-Bust-Your-Diet.jpg&f=1&nofb=1);
   height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   /* margin-top: 100px; */
 }
-
-/* }      */
-
-/* .container{
-        display: grid;
-        grid-template-columns: 1fr, 2fr, 1fr;
-        margin-top: 10px;
-        grid-column-gap: 1em;
-        margin-left: 5%;
-        margin-bottom: 5%;
-        background-color: #ffe082;
-      } */
-
-/* .container > div {
-        background: #eee;
-        padding: 1rem;
-      }
-
-      .container > div:nth-child(odd){
-        background:#ddd;
-      } */
 
 .nav-wrapper {
   background-color: black;
@@ -45,9 +27,9 @@ body {
   margin-top: 35px;
   font-family: 'Indie Flower', cursive;
   color: whitesmoke;
-  /* font-weight: bold; */
-  font-size: 60px;
-  text-shadow: -2px 1px 2px palevioletred;
+  font-weight: bold;
+  font-size: 70px;
+  text-shadow: -3px 1px 2px palevioletred;
   max-width: 100%;
 }
 
@@ -78,8 +60,8 @@ body {
   text-align: center;
   font-weight: bold;
   box-shadow: -10px 10px 8px turquoise;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: turquoise;
 }
 
 /* #searchBar {
@@ -167,6 +149,20 @@ img {
   overflow: scroll;
 }
 
-/* .collection-item {
-      grid-area: 2/1/6/2;
-      } */
+.zig-zag {
+  border: none;
+  width: 50%;
+  margin: auto;
+  height: 40px;
+  background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(315deg, #ECEDDC 25%, transparent 25%), linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-color: turquoise;
+  width: 100%;
+  height: 50px;
+}
+
+/* Sticky Footer */
+
+main {
+  flex: 1 0 auto;
+}
