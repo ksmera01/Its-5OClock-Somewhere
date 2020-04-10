@@ -54,6 +54,7 @@ body {
   background-size: 75%;
 }
 
+
 #logoText {
   margin-top: 2.5%;
   font-family: 'Indie Flower', cursive;
@@ -253,3 +254,5 @@ one for tablet (about 768px. 1024px for ipad pro)
 one for PC (usually 1024px or higher. some PCs are at 800x600 px, but they can use tablet rules)
 use chrome dev tools to test out the layout on each device. it's very important. 
 */
+
+
