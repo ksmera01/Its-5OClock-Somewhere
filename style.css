@@ -116,6 +116,11 @@ body {
         text-align: center;
       }
 
+      .scrollbar{
+        width: 700px;
+        height: 700px;
+        overflow: scroll;
+      }
      /* .collection-item {
       grid-area: 2/1/6/2;
       } */

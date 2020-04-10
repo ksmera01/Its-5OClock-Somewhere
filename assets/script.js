@@ -256,7 +256,9 @@ $().ready(function () {
                     searchResultsDiv.append(h5instructionHeader);
                     searchResultsDiv.append(pInstructions);
                     searchResultsDiv.append(image);
+                    $("#results").addClass("scrollbar");
                     $("#results").append(searchResultsDiv);
+
 
                 }
 
