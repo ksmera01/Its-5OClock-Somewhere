@@ -131,12 +131,14 @@ $().ready(function () {
         $.ajax(settings).done(function (response) {
             console.log(response);
             var barList = response.businesses
+            let barHeader = $('<div>').appendTo('#nearestBars').addClass('collection-header')
+            $('<h6>').appendTo(barHeader).text('Cocktail Bars near ' + barList[0].location.city).css({ 'color': 'white', 'font-size': '1.4rem', 'text-align': 'center' })
 
             for (let i = 0; i < 5; i++) {
                 let barEntry = barList[i];
-                let barRow = $('<div>').appendTo('#nearestBars')
-                $('<a>').appendTo(barRow).attr('href', barEntry.url).text(barEntry.name)
-
+                let barRow = $('<div>').appendTo('#nearestBars').addClass('collection-item').css({ 'color': 'white' })
+                $('<a>').appendTo(barRow).attr('href', barEntry.url).text(barEntry.name).css({ 'color': 'white', 'font-size': '1.1em', 'font-weight': 'bolder' })
+                $('<p>').appendTo(barRow).text(barEntry.location.address1 + ", " + barEntry.location.city + " " + barEntry.location.zip_code)
             }
         });
     } // ----- END YELP API CALL
