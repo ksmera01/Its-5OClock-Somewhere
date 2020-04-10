@@ -115,7 +115,6 @@ body {
 #results {
   grid-area: 2/2/6/5;
   grid-auto-rows: max-content;
-  background: rgba(-35, 141, 115, 0.5);
   color: whitesmoke;
   text-align: center;
 }
