@@ -6,7 +6,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Gotu|Indie+Flower&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Indie+Flower&display=swap" rel="stylesheet"> -->
 
   <!--Import materialize.css-->
   <!-- Compiled and minified CSS -->
@@ -24,11 +25,11 @@
   <!-- Modal Structure -->
   <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
-      <h1>ARE YOU 21+?</h1>
+      <h1 id="age">ARE YOU 21+?</h1>
       <!-- <p>A bunch of text</p> -->
     </div>
     <div class="modal-footer">
-      <a href="#!" id="yes" class="modal-close waves-effect waves-green btn-flat">Yes I am 21+!</a>
+      <a href="#!" id="yes" class="modal-close waves-effect waves-green btn-flat center">Yes I am 21+!</a>
     </div>
   </div>
 
@@ -37,6 +38,8 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#" id="logoText" class="brand-logo center">5 O'Clock Somewhere</a>
+      <p id="sloganL" class="left">when your days are long</p>
+      <p id="sloganR" class="right">make your evenings a little bit happier</p>
       <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><i class="fas fa-cocktail"></i></li>
         <li><a href="badges.html">Components</a></li>
@@ -57,9 +60,9 @@
     <!-- input field -->
 
     <div class="input-field inline">
-      <input id="drink-input" type="text" class="validate"></input>
+      <input id="drink-input" type="text" class="validate cyan-text"></input>
       <!-- <input id="cocktailInput" type="cocktail" class="validate"> -->
-      <label for="cocktailInput" id=fadedText>Enter cocktail name here!</label>
+      <label for="cocktailInput" id=fadedText> Enter cocktail name here!</label>
       <!-- <input id="drinkInput" type="email" class="validate">
             <label for="email_inline">Enter cocktail name here!</label> -->
       <!-- <a id="searchButton" class="waves-effect waves-light btn-small inline">Button</a> -->
@@ -98,23 +101,23 @@
 
   <footer class="page-footer">
     <div class="containerFoot">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
+      <!-- <div class="row">
+        <div class="col l6 s12"> -->
+      <h5 class="white-text" id="footer">Thanks for visiting! Please drink responsibly.</h5>
+      <!-- <p class="grey-text text-lighten-4">Thanks for visiting! Please drink responsibly.</p> -->
+      <!-- </div> -->
+      <!-- <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
           <div id="giphy">
 
           </div>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
     </div>
     <div class="footer-copyright">
-      <div class="containerFoot">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      <div id="copyright" class="containerFoot">
+        © 2020 Team CnC
+        <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
       </div>
     </div>
   </footer>
