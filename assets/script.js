@@ -199,6 +199,7 @@ $().ready(function () {
             .then(function (response) {
                 var searchResultsDiv = $("#recipes");
                 searchResultsDiv.empty()
+                searchResultsDiv.css('background', 'rgba(-35, 141, 115, 0.5)');
                 // For loop
                 for (var i = 0; i < response.drinks.length; i++) {
 
