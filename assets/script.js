@@ -26,24 +26,24 @@ $().ready(function () {
         if (currentHour > 19) {
             let hoursUntil = 24 - currentHour + 17;
             console.log(hoursUntil);
-            $('#countdown').html(hoursUntil + " hours until Happy Hour!");
+            $('#countdownText').html(hoursUntil + " hours until Happy Hour!");
         }
 
         if (currentHour < 17) {
             let gettingClose = 17 - currentHour;
             console.log(gettingClose);
-            $('#countdown').html(gettingClose + " hours until Happy Hour!");
+            $('#countdownText').html(gettingClose + " hours until Happy Hour!");
 
         }
 
         if (currentHour == 16) {
             let hourLeft = 17 - currentHour;
-            $('#countdown').html(hourLeft + " hour until Happy Hour!");
+            $('#countdownText').html(hourLeft + " hour until Happy Hour!");
         }
 
 
         if (currentHour == 17 || currentHour == 18 || currentHour == 19) {
-            $('#countdown').html("IT'S TIME FOR HAPPY HOUR!");
+            $('#countdownText').html("IT'S TIME FOR HAPPY HOUR!");
         }
     }
 

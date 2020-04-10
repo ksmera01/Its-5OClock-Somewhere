@@ -51,11 +51,25 @@ body {
           text-align: center;
           margin-top: 50px;
       }
-
+/* 
       #countdown {
         grid-area: 1/1/2/2 ;
         background-color:  #ffe082;
         float: left;
+      } */
+      #countdown {
+        grid-area: 1/1/2/2 ;
+        /* background-color:  #dbc129; */
+        background-color: rgb(119, 15, 15);
+        float: left;
+        border-radius: 50%;
+        height: 200px;
+        color: white;
+        text-align: center; 
+        font-weight: bold;
+        box-shadow: -10px 10px 8px turquoise;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
       }
 
       /* #searchBar {
@@ -65,6 +79,7 @@ body {
       #drink-input {
         grid-area: 1/2/2/5;
         margin-left: 200px;
+        color: white;
       }
 
       /* #fadedtext {
