@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     /* grid-template-rows: 20% 20% 20% 20% 20%; */
-    margin-top: 20px;
+    margin-top: 25px;
     grid-column-gap: 1em;
     margin-left: 5%;
     max-width: 85%;
@@ -14,7 +14,7 @@
 body {
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F04%2Fft-8-Skinny-Summer-Cocktails-That-Wont-Bust-Your-Diet.jpg&f=1&nofb=1);
   height: 100%;
-  /* margin-top: 200px; */
+  /* margin-top: 100px; */
 }
         
 /* }      */
@@ -40,7 +40,19 @@ body {
 
       .nav-wrapper {
           background-color: black;
+        
       }
+
+      #logoText {
+        margin-top: 35px;
+        font-family: 'Indie Flower', cursive;
+        color: whitesmoke;
+        /* font-weight: bold; */
+        font-size: 60px;
+        text-shadow: -2px 1px 2px palevioletred;
+        max-width: 100%;
+      }
+
 
       .page-footer {
           background-color: black;
@@ -114,6 +126,19 @@ body {
         max-height: 400px;
         max-width: 400px;
         text-align: center;
+      }
+
+      /* #results {
+        background-color: gray;
+        opacity: 60%;
+      } */
+
+      .whiteSpace {
+        /* background-color: rgb(219, 185, 50); */
+        /* background-color: rgb(230, 201, 201); */
+        background-image: linear-gradient(to right, rgb(119, 15, 15), palevioletred);
+        height: 100px;
+        border-style: none;
       }
 
       .scrollbar{
