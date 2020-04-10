@@ -10,6 +10,12 @@
     grid-auto-rows: minmax(100px, auto);
 
 }
+
+body {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F04%2Fft-8-Skinny-Summer-Cocktails-That-Wont-Bust-Your-Diet.jpg&f=1&nofb=1);
+  height: 100%;
+  /* margin-top: 200px; */
+}
         
 /* }      */
      
