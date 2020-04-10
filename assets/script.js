@@ -181,6 +181,9 @@ $().ready(function () {
     $("#searchButton").on("click", function (event) {
         event.preventDefault()
         var userInput = document.getElementById("drink-input").value;
+        if (userInput == "" || userInput == " ") {
+            return
+        }
         updateRecents(userInput)
         searchCocktails(userInput)
     })
