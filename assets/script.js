@@ -100,6 +100,12 @@ $().ready(function () {
         // // saves entire Object to local storage
         localStorage.setItem('Recent Drinks', JSON.stringify(recentSearches));
     }
+    // NEEDED TEMPORARY FUNCTION TO MAKE THE HEADER POP TO TOP WHENEVER NAV ITEM IS CREATED
+    function callRecentsHd() {
+        $('#recentsHdr').remove()
+        let recentsHeader = $('<div>').prependTo('#recentSearches').addClass('collection-header').attr('id', 'recentsHdr')
+        $('<h6>').appendTo(recentsHeader).text('Your recently searched cocktails...').css({ 'color': 'white', 'font-size': '1.4rem', 'text-align': 'center' })
+    }
 
     function generateNav() {
         //NEEDED TO REVERSE THIS LOOP TO CREATE THE ELEMENTS IN THE SAME ORDER AS SEARCHED
@@ -109,6 +115,7 @@ $().ready(function () {
         for (let i = 0; i < recentSearches.length; i++) {
             pushNavItem(recentSearches[i])
         }
+        callRecentsHd()
     }
     //--------- END LOCAL STORAGE ---------
 
@@ -170,6 +177,7 @@ $().ready(function () {
     function pushNavItem(param) {
         console.log(param)
         $('<a>').addClass('collection-item').attr('data-name', param).on('click', btnValParse).text(param).prependTo(navList)
+        callRecentsHd()
     }
     // this is a temporary solution to parse the data value to send to searchCocktails
     function btnValParse() {
@@ -183,6 +191,9 @@ $().ready(function () {
     $("#searchButton").on("click", function (event) {
         event.preventDefault()
         var userInput = document.getElementById("drink-input").value;
+        userInput = userInput.charAt(0).toUpperCase() + userInput.slice(1)
+        console.log(userInput)
+
         if (userInput == "" || userInput == " ") {
             return
         }
