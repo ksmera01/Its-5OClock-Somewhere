@@ -2,30 +2,22 @@
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  margin-top: 20px;
-  grid-column-gap: 1em;
-  margin-left: 5%;
-  max-width: 85%;
-  grid-auto-rows: minmax(100px, auto);
+.container {
+  width: 90%;
 }
 
 nav {
   min-height: 120px;
-  /* background-color: rgb(216, 112, 147, .8); */
-  /* background-color: rgb(255, 165, 0, 0.9); */
-  /* background-color: rgb(64, 224, 208, 0.9); */
-  /* background-color: rgb(-35, 141, 115, 0.95); */
   background-color: rgb(0, 0, 0, 0.95);
   border-style: none none solid none;
   border-width: 0.5em;
   border-color: whitesmoke;
   box-shadow: -2em 2em 1em black;
 }
+
 
 #sloganL {
   margin-top: 4%;
@@ -50,7 +42,7 @@ body {
   background-repeat: no-repeat;
   background-color: #000000;
   background-attachment: fixed;
-  background-position: center bottom 10%;
+  background-position: center bottom 1%;
   background-size: 75%;
 }
 
@@ -59,10 +51,10 @@ body {
   margin-top: 2.5%;
   font-family: 'Indie Flower', cursive;
   color: whitesmoke;
-  /* font-weight: bold; */
   font-size: 5em;
+  font-size: 1vm;
   text-shadow: -4px 2px 2px rgb(119, 15, 15);
-  max-width: 100%;
+  width: 100%;
   box-shadow: rgb(119, 15, 15);
 }
 
@@ -77,12 +69,13 @@ body {
   background-repeat: no-repeat;
   background-position: center left 15%;
   background-color: black;
+
 }
 
 #age {
   color: whitesmoke;
   margin-left: 35%;
-  margin-top: 18%;
+  margin-top: 20%;
 }
 
 #yes {
@@ -92,60 +85,43 @@ body {
 }
 
 #countdown {
-  grid-area: 1/1/2/2;
   background-color: rgb(119, 15, 15, 0.95);
   float: left;
   border-radius: 50%;
-  height: 200px;
+  height: 100%;
+  max-width: 80%;
+  margin-top: 2%;
   font-family: 'Gochi Hand', cursive;
   color: white;
   text-align: center;
-  /* font-weight: bold; */
   box-shadow: -10px 10px 8px turquoise;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: turquoise;
 }
 
 #countdownText {
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 5%;
   max-width: 90%;
 }
 
 #drink-input {
-  grid-area: 1/2/2/5;
-  margin-left: 90%;
   color: white;
 }
 
-.input-field.inline {
-  /* margin-top: -9px; */
-  /* margin-top: 40px; */
-}
-
-/* #fadedtext {
-  margin-top: 240px;
-} */
-
 #searchButton {
-  grid-area: 1/3/2/4;
-  margin-top: 10%;
-  width: 100px;
-  margin-left: 200px;
+  margin-top: 2%;
 }
 
 #recentSearchesBox {
-  grid-area: 2/1/6/2;
-  margin-top: 20px;
+  margin-top: 1%;
 }
 
 #fadedText {
-  margin-left: 240px;
+  margin-left: 15%;
 }
 
 #results {
-  grid-area: 2/2/6/5;
-  grid-auto-rows: max-content;
   color: whitesmoke;
   text-align: center;
   font-family: 'Gotu', sans-serif;
@@ -175,8 +151,8 @@ body {
 }
 
 img {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 60%;
+  max-width: 60%;
   text-align: center;
 }
 
@@ -186,7 +162,7 @@ img {
   overflow: scroll;
 }
 
-.zig-zag {
+#zig-zag {
   border: none;
   width: 50%;
   margin: auto;
@@ -212,25 +188,90 @@ main {
   flex: 1 0 auto;
 }
 
-/*tablets*/
+/*iphones*/
 
-@media only screen and (max-width:1024px
-/*min-width is also a possibility*/
-
-) and (min-width:768px) {
+@media only screen and (max-width:600px) and (min-width:300px) {
+  #modal1 {
+    height: 30%;
+  }
+  #age {
+    font-size: 2.5em;
+  }
+  #countdown {
+    margin-top: 3%;
+    margin-left: 10%;
+  }
   #logoText {
-    font-size: 3em;
+    font-size: 2rem;
+    width: 100%;
+    margin-top: 2%;
+  }
+  #sloganL {
+    margin-top: 12%;
+  }
+  #sloganR {
+    margin-top: -12%;
+    margin-right: 0%;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+  .container {
+    margin-left: 10%;
+    width: 100%;
+  }
+  #fadedText {
+    margin-left: 30%;
+  }
+  #zig-zag {
+    margin-bottom: 0%;
+    margin-left: 10%;
+    width: 100%;
+  }
+  nav {
+    margin-left: 5%;
+  }
+  body {
+    width: 100%;
+  }
+  .containerFoot {
+    margin-left: 10%;
+    width: 100%;
+  }
+  #copyright {
+    text-align: center;
+    margin-left: 0%;
   }
 }
 
-/*iphones*/
+/*tablets*/
 
-@media only screen and (max-width:600px
-/*min-width is also a possibility*/
-
-) and (min-width:300px) {
-  main {
-    flex: 1 2 auto;
+@media only screen and (max-width:1024px) and (min-width:768px) {
+  #modal1 {
+    height: 30%;
+  }
+  #age {
+    font-size: 3em;
+  }
+  #logoText {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .input-field.inline {
+    margin-top: 15%;
+  }
+  #searchButton {
+    margin-top: 15%;
+  }
+  #sloganL {
+    margin-top: 7%;
+  }
+  #sloganR {
+    margin-top: 7%;
+  }
+  #zig-zag {
+    width: 100%;
+    margin-bottom: 0%;
   }
 }
 
@@ -238,21 +279,14 @@ main {
 
 @media only screen and (min-width:1024px) {
   main {
-    flex: 1 2 auto;
+
+    flex: 1 0 auto;
+  }
+  #sloganL {
+    margin-top: 3%;
+  }
+  #sloganR {
+    margin-top: 3%;
   }
 }
-
-/*
-best practice notes:
-use EMs and REMs for font - keeps things relative
-using pixels will make things very screen size specific and makes your work ahve a bias towards your current screen
-using percentages and laying things out in ratios, will work on more devices and is better practice
-
-generally you want 3 sets of media queries - 
-one for phone (about 450px but double check chrome dev tools)
-one for tablet (about 768px. 1024px for ipad pro)
-one for PC (usually 1024px or higher. some PCs are at 800x600 px, but they can use tablet rules)
-use chrome dev tools to test out the layout on each device. it's very important. 
-*/
-
 

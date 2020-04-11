@@ -26,7 +26,8 @@
   <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
       <h1 id="age">ARE YOU 21+?</h1>
-      <!-- <p>A bunch of text</p> -->
+
+
     </div>
     <div class="modal-footer">
       <a href="#!" id="yes" class="modal-close waves-effect waves-green btn-flat center">Yes I am 21+!</a>
@@ -34,94 +35,80 @@
   </div>
 
 
-
+  <!-- nav bar -->
   <nav>
-    <div class="nav-wrapper">
-      <a href="#" id="logoText" class="brand-logo center">5 O'Clock Somewhere</a>
-      <p id="sloganL" class="left">when your days are long</p>
-      <p id="sloganR" class="right">make your evenings a little bit happier</p>
-      <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><i class="fas fa-cocktail"></i></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul> -->
+    <div class=nav-fixed>
+      <div class="nav-wrapper col s12 m12 l12 xl12">
+        <a href="#" id="logoText" class="brand-logo center">5 O'Clock Somewhere</a>
+        <p id="sloganL" class="left s12">when your days are long</p>
+        <p id="sloganR" class="right s12">make your evenings a little bit happier</p>
+      </div>
+    </div>
     </div>
   </nav>
 
 
-
-  <div class="wrapper">
-
+  <div class="container">
     <!-- for countdown box -->
-    <div id="countdown">
-      <h3 id="countdownText"></h3>
-    </div>
 
-    <!-- input field -->
-
-    <div class="input-field inline">
-      <input id="drink-input" type="text" class="validate cyan-text"></input>
-      <!-- <input id="cocktailInput" type="cocktail" class="validate"> -->
-      <label for="cocktailInput" id=fadedText> Enter cocktail name here!</label>
-      <!-- <input id="drinkInput" type="email" class="validate">
-            <label for="email_inline">Enter cocktail name here!</label> -->
-      <!-- <a id="searchButton" class="waves-effect waves-light btn-small inline">Button</a> -->
-    </div>
-
-    <!-- search button -->
-    <div id="searchButton" class="waves-effect waves-light btn">Search</a></div>
-
-
-    <!-- </div> -->
-
-    <!-- <div class="container"> -->
-
-
-    <div id="recentSearchesBox">
-      <div id="recentSearches" class="collection">
-      </div>
-    </div>
-    <h1 class="name"></h1>
-    <div id="results" class="container">
-      <!-- adding scrollspy -->
-      <div id="structure" class="section scrollspy">
-        <p id="recipes"></p>
+    <div class="row">
+      <div class="col s12 m4 l3 xl3" id="countdown">
+        <h3 id="countdownText"></h3>
       </div>
 
+
+      <!-- cocktail input field -->
+      <div class="input-field inline col s12 m6 l3 xl3 offset-l1 offset-xl1">
+        <input id="drink-input" type="text" class="validate cyan-text"></input>
+        <label for="cocktailInput" id=fadedText> Enter cocktail name here!</label>
+      </div>
+
+      <!-- search button -->
+      <div id="searchButton" class="waves-effect waves-light btn col s12 m2 l2 xl2">Search</a></div>
+
     </div>
 
-    <div id="nearestBars" class="collection">
 
+    <!-- recently searched -->
+    <div class="row">
+      <div id="recentSearchesBox" class="col s12 m3 l3 xl3">
+        <div id="recentSearches" class="collection"></div>
+      </div>
+
+      <!-- results -->
+      <div id="results" class="col s12 m6 l6 xl6">
+        <!-- adding scrollspy -->
+        <div id="structure" class="section scrollspy">
+          <p id="recipes"></p>
+        </div>
+      </div>
+
+
+      <!-- nearest results -->
+      <div id="nearestBars" class="collection col s12 m3 l3 xl3">
+      </div>
     </div>
-
+    <!-- container end -->
   </div>
-  </div>
 
-  <hr class="zig-zag">
+
+  <!-- design hr -->
+  <hr id="zig-zag">
   </hr>
 
-  <footer class="page-footer">
+  <!-- footer -->
+  <footer class="page-footer col s12 m12 l12 xl12">
     <div class="containerFoot">
-      <!-- <div class="row">
-        <div class="col l6 s12"> -->
       <h5 class="white-text" id="footer">Thanks for visiting! Please drink responsibly.</h5>
-      <!-- <p class="grey-text text-lighten-4">Thanks for visiting! Please drink responsibly.</p> -->
-      <!-- </div> -->
-      <!-- <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <div id="giphy">
+      <div class="footer-copyright">
+        <div id="copyright" class="containerFoot">
+          © 2020 Team CnC
 
-          </div>
-        </div> -->
-      <!-- </div> -->
-    </div>
-    <div class="footer-copyright">
-      <div id="copyright" class="containerFoot">
-        © 2020 Team CnC
-        <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+        </div>
       </div>
-    </div>
+
   </footer>
+
 
 
 
