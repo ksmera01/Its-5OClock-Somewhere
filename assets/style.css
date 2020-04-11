@@ -44,7 +44,6 @@ body {
   background-size: 75%;
 }
 
-
 #logoText {
   margin-top: 2.5%;
   font-family: 'Indie Flower', cursive;
@@ -113,6 +112,10 @@ body {
   margin-top: 1%;
 }
 
+#nearestBars {
+  padding: 0px;
+}
+
 #fadedText {
   margin-left: 15%;
 }
@@ -141,10 +144,6 @@ body {
 
 .collection a.collection-item:not(.active):hover {
   background-color: rgb(119, 15, 15);
-}
-
-#nearestBars {
-  grid-area: 2/5/6/6;
 }
 
 img {
@@ -176,14 +175,14 @@ img {
   text-align: center;
 }
 
-#copyright {
-  margin-left: 85%;
-}
-
 /* Sticky Footer */
 
 main {
   flex: 1 0 auto;
+}
+
+#copyright {
+  margin-left: 45%;
 }
 
 /*iphones*/
@@ -236,10 +235,6 @@ main {
     margin-left: 10%;
     width: 100%;
   }
-  #copyright {
-    text-align: center;
-    margin-left: 0%;
-  }
 }
 
 /*tablets*/
@@ -285,8 +280,4 @@ main {
   #sloganR {
     margin-top: 3%;
   }
-
 }
-
-
-
