@@ -46,7 +46,7 @@ This page features a cocktail search with results, a list of nearest bars to the
 
 ![local storage and mobile demo](https://github.com/ksmera01/Its-5OClock-Somewhere/blob/master/assets/images/localstorage.png)
 
-![full page](https://github.com/kaito47/weather_dashboard/blob/master/assets/weather_result.png)
+![full page](https://github.com/ksmera01/Its-5OClock-Somewhere/blob/master/assets/images/mainPage.png)
 
 
 ## Link:
