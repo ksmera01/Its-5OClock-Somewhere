@@ -2,6 +2,7 @@
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
 }
 
 .container {
@@ -16,6 +17,7 @@ nav {
   border-color: whitesmoke;
   box-shadow: -2em 2em 1em black;
 }
+
 
 #sloganL {
   margin-top: 4%;
@@ -44,6 +46,7 @@ body {
   background-size: 75%;
 }
 
+
 #logoText {
   margin-top: 2.5%;
   font-family: 'Indie Flower', cursive;
@@ -66,6 +69,7 @@ body {
   background-repeat: no-repeat;
   background-position: center left 15%;
   background-color: black;
+
 }
 
 #age {
@@ -96,7 +100,7 @@ body {
 }
 
 #countdownText {
-  margin-top: 10;
+  margin-top: 10%;
   margin-left: 5%;
   max-width: 90%;
 }
@@ -275,6 +279,7 @@ main {
 
 @media only screen and (min-width:1024px) {
   main {
+
     flex: 1 0 auto;
   }
   #sloganL {
@@ -284,3 +289,4 @@ main {
     margin-top: 3%;
   }
 }
+
