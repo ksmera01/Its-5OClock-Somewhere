@@ -1,0 +1,292 @@
+* {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+.container {
+  width: 90%;
+}
+
+nav {
+  min-height: 120px;
+  background-color: rgb(0, 0, 0, 0.95);
+  border-style: none none solid none;
+  border-width: 0.5em;
+  border-color: whitesmoke;
+  box-shadow: -2em 2em 1em black;
+}
+
+#sloganL {
+  margin-top: 4%;
+  margin-left: 8%;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2em;
+}
+
+#sloganR {
+  margin-top: 4%;
+  margin-right: 2%;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2em;
+}
+
+body {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F04%2Fft-8-Skinny-Summer-Cocktails-That-Wont-Bust-Your-Diet.jpg&f=1&nofb=1);
+  height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  background-attachment: fixed;
+  background-position: center bottom 1%;
+  background-size: 75%;
+}
+
+
+#logoText {
+  margin-top: 2.5%;
+  font-family: 'Indie Flower', cursive;
+  color: whitesmoke;
+  font-size: 5em;
+  font-size: 1vm;
+  text-shadow: -4px 2px 2px rgb(119, 15, 15);
+  width: 100%;
+  box-shadow: rgb(119, 15, 15);
+}
+
+.page-footer {
+  background-color: black;
+}
+
+.modal-content {
+  text-align: center;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F1e%2FVienna_Convention_road_sign_B2a.svg%2F1200px-Vienna_Convention_road_sign_B2a.svg.png&f=1&nofb=1);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center left 15%;
+  background-color: black;
+}
+
+#age {
+  color: whitesmoke;
+  margin-left: 35%;
+  margin-top: 20%;
+}
+
+#yes {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#countdown {
+  background-color: rgb(119, 15, 15, 0.95);
+  float: left;
+  border-radius: 50%;
+  height: 100%;
+  max-width: 80%;
+  margin-top: 2%;
+  font-family: 'Gochi Hand', cursive;
+  color: white;
+  text-align: center;
+  box-shadow: -10px 10px 8px turquoise;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: turquoise;
+}
+
+#countdownText {
+  margin-left: 5%;
+  max-width: 90%;
+}
+
+#drink-input {
+  color: white;
+}
+
+#searchButton {
+  margin-top: 2%;
+}
+
+#recentSearchesBox {
+  margin-top: 1%;
+}
+
+#fadedText {
+  margin-left: 15%;
+}
+
+#results {
+  color: whitesmoke;
+  text-align: center;
+  font-family: 'Gotu', sans-serif;
+  margin-bottom: 5%;
+}
+
+.collection a.collection-item {
+  display: block;
+  -webkit-transition: .25s;
+  transition: .25s;
+  color: white;
+}
+
+.collection .collection-item {
+  background-color: rgba(172, 128, 116, 0.6);
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.collection a.collection-item:not(.active):hover {
+  background-color: rgb(119, 15, 15);
+}
+
+#nearestBars {
+  grid-area: 2/5/6/6;
+}
+
+img {
+  max-height: 60%;
+  max-width: 60%;
+  text-align: center;
+}
+
+.scrollbar {
+  width: 700px;
+  height: 700px;
+  overflow: scroll;
+}
+
+#zig-zag {
+  border: none;
+  width: 50%;
+  margin: auto;
+  height: 40px;
+  background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(315deg, #ECEDDC 25%, transparent 25%), linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-color: turquoise;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 0%;
+}
+
+#footer {
+  text-align: center;
+}
+
+#copyright {
+  margin-left: 85%;
+}
+
+/* Sticky Footer */
+
+main {
+  flex: 1 0 auto;
+}
+
+/*iphones*/
+
+@media only screen and (max-width:600px) and (min-width:300px) {
+  #modal1 {
+    height: 30%;
+  }
+  #age {
+    font-size: 2.5em;
+  }
+  #countdown {
+    margin-top: 3%;
+    margin-left: 10%;
+  }
+  #logoText {
+    font-size: 2rem;
+    width: 100%;
+    margin-top: 2%;
+  }
+  #sloganL {
+    margin-top: 12%;
+  }
+  #sloganR {
+    margin-top: -12%;
+    margin-right: 0%;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+  .container {
+    margin-left: 10%;
+    width: 100%;
+  }
+  #fadedText {
+    margin-left: 30%;
+  }
+  #zig-zag {
+    margin-bottom: 0%;
+    margin-left: 10%;
+    width: 100%;
+  }
+  nav {
+    margin-left: 5%;
+  }
+  body {
+    width: 100%;
+  }
+  .containerFoot {
+    margin-left: 10%;
+    width: 100%;
+  }
+  #copyright {
+    text-align: center;
+    margin-left: 0%;
+  }
+}
+
+/*tablets*/
+
+@media only screen and (max-width:1024px) and (min-width:768px) {
+  #modal1 {
+    height: 30%;
+  }
+  #age {
+    font-size: 3em;
+  }
+  #logoText {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .input-field.inline {
+    margin-top: 15%;
+  }
+  #searchButton {
+    margin-top: 15%;
+  }
+  #sloganL {
+    margin-top: 7%;
+  }
+  #sloganR {
+    margin-top: 7%;
+  }
+  #zig-zag {
+    width: 100%;
+    margin-bottom: 0%;
+  }
+}
+
+/*desktop*/
+
+@media only screen and (min-width:1024px) {
+  main {
+    flex: 1 0 auto;
+  }
+  #sloganL {
+    margin-top: 3%;
+  }
+  #sloganR {
+    margin-top: 3%;
+  }
+
+}
+
+
+
